@@ -54,7 +54,7 @@ const App = () => {
       .catch((err) => {
         console.error("failed to get proposals", err);
       });
-  }, [hasClaimedNFT]);
+  }, [hasClaimedNFT, voteModule]);
 
   useEffect(() => {
     if (!hasClaimedNFT) {
@@ -81,7 +81,7 @@ const App = () => {
       .catch((err) => {
         console.error("failed to check if wallet has voted", err);
       });
-  }, [hasClaimedNFT, proposals, address]);
+  }, [hasClaimedNFT, proposals, address, voteModule]);
 
   useEffect(() => {
     // If they don't have an connected wallet, exit!
